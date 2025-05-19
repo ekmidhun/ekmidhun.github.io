@@ -3,142 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midhun E K – Research Portfolio</title>
-    <base target="_self">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Preline for UI interactions -->
-    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .fade-in { animation: fadeIn 0.5s ease-in both; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
-    </style>
+    <title>Midhun E K - Robotics and AI Researcher</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-
-    <!-- HEADER / NAV -->
-    <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="#" class="text-xl font-bold text-gray-900 dark:text-white" id="logo-link">
-                        Midhun<span class="text-primary-600">E K</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="nav-link text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">About</a>
-                    <a href="#publications" class="nav-link text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Publications</a>
-                    <a href="#projects" class="nav-link text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Projects</a>
-                    <a href="#contact" class="nav-link text-gray-600 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">Contact</a>
-                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <i class="fas fa-moon dark:hidden text-gray-600"></i>
-                        <i class="fas fa-sun hidden dark:inline text-yellow-300"></i>
-                    </button>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <i class="fas fa-bars text-gray-600 dark:text-gray-300"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-            <div class="px-4 py-3 space-y-2">
-                <a href="#about" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
-                <a href="#publications" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Publications</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Projects</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
-                <div class="flex justify-between px-3 py-2">
-                    <span class="text-gray-700 dark:text-gray-300">Dark Mode</span>
-                    <button id="mobile-theme-toggle" class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-200 dark:bg-gray-600">
-                        <span class="sr-only">Toggle dark mode</span>
-                        <span class="inline-block h-4 w-4 transform rounded-full bg-white dark:bg-gray-300 translate-x-1 dark:translate-x-6 transition"></span>
-                    </button>
-                </div>
-            </div>
-        </div>
+<body>
+    <header>
+        <!-- Add your profile image here -->
+        <img src="midhun.jpg" alt="Midhun E K" class="profile-image">
+        <h1>Midhun Edatharam Kunnath</h1>
+        <p>Researcher, Robotics and Artificial Intelligence</p>
+        <p>Lulea University of Technology, Sweden</p>
+        <p>Developing AI models for virtual forest creation using LiDAR point cloud data</p>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- HERO -->
-        <section id="about" class="mb-20 fade-in">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/3">
-                    <img src="midhun.jpg" alt="Midhun E K" class="w-full h-auto rounded-lg shadow-lg object-cover aspect-square">
-                </div>
-                <div class="md:w-2/3 mt-8 md:mt-0">
-                    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Dr. Midhun E K</h1>
-                    <h2 class="text-2xl font-semibold text-primary-600 mb-6">Robotics & AI Researcher</h2>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                        Doctoral candidate at Luleå University of Technology specializing in UAV guidance, LiDAR mapping,
-                        and autonomous navigation. Translating advanced research into real-world robotics solutions.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#contact" class="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors">
-                            Contact Me
-                        </a>
-                        <a href="Midhun_CV.pdf" class="px-6 py-3 border border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-gray-800 rounded-lg font-medium transition-colors">
-                            Download CV
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <!-- PUBLICATIONS -->
-        <section id="publications" class="mb-20 fade-in">
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Publications</h2>
-                <p class="text-gray-600 dark:text-gray-300 max-w-3xl">
-                    Selected peer-reviewed papers and conference articles.
-                </p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8" id="publications-container">
-                <!-- Populated via script -->
-            </div>
-        </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>As a Ph.D. holder in Aerospace Engineering from the Indian Institute of Science (IISc), I specialized in designing and implementing bearing-only measurement-based guidance for quadrotor UAVs in gap traversal scenarios. My research contributions include two articles published in the Journal of Guidance, Control, and Dynamics and five papers presented at prestigious international conferences. Additionally, I have over one and a half years of experience as an Assistant Professor at NIT Tiruchirappalli and as an Electronics Design Engineer at Greendzine Technologies. I am passionate about advancing aerospace engineering and contributing to the development of innovative and sustainable solutions for future challenges. 
+            My PhD was awarded on July 16, 2024. I then worked as a Research Associate at the Autonomous Vehicles Laboratory (AVL), Department of Aerospace Engineering, Indian Institute of Science, Bengaluru, India. Currently, I am a Researcher at the Robotics and Artificial Intelligence group, Department of Computer Science, Electrical and Space Engineering, Luleå University of Technology, Sweden, working on AI-based tree segmentation for virtual forest creation.</p>
+    </section>
 
-        <!-- PROJECTS -->
-        <section id="projects" class="mb-20 fade-in">
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Research Projects</h2>
-                <p class="text-gray-600 dark:text-gray-300 max-w-3xl">
-                    Major research initiatives and collaborations.
-                </p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8" id="projects-container">
-                <!-- Populated via script -->
-            </div>
-        </section>
+    <section id="research">
+        <h2>Research</h2>
+        <p>My research interests include:</p>
+        <ul>
+            <li>Aerial robotics</li>
+            <li>Quadrotor guidance</li>
+            <li>Autonomous navigation</li>
+            <li>Path planning</li>
+            <li>UAS Traffic Management (UTM)</li>
+            <li>Computer Vision</li>
+            <li>Machine Learning</li>
+        </ul>
+    </section>
 
-        <!-- CONTACT -->
-        <section id="contact" class="fade-in">
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 md:p-12">
-                <div class="max-w-3xl mx-auto">
+    <section id="publications">
+        <h2>Publications</h2>
+
+        <h3>Journal Articles</h3>
+        <ol>
+            <li>
+                E. K. Midhun and A. Ratnoo, “Local Information-Based Guidance for Lane Transition in Air Corridors,” <em>Journal of Guidance, Control, and Dynamics</em>, Vol. 47, No. 3, pp. 564-572, 2024. 
+                <a href="https://doi.org/10.2514/1.G007752" target="_blank">https://doi.org/10.2514/1.G007752</a>
+            </li>
+            <li>
+                E. K. Midhun and A. Ratnoo, “Gap Traversal Guidance Using Bearing Information,” <em>Journal of Guidance, Control, and Dynamics</em>, Vol. 45, No. 12, pp. 2360-2368, 2022. 
+                <a href="https://doi.org/10.2514/1.G006898" target="_blank">https://doi.org/10.2514/1.G006898</a>
+            </li>
+            <li>
+                E. K. Midhun and A. Ratnoo, “Quadrotor Guidance for Window Traversal: A Bearings-Only Approach,” arXiv preprint arXiv: 2410.14367, 2024. 
+                <a href="https://arxiv.org/abs/2410.14367" target="_blank">https://arxiv.org/abs/2410.14367</a>
+            </li>
+        </ol>
+
+        <h3>Conference Proceedings</h3>
+        <ol>
+            <li>
+                E. K. Midhun and A. Ratnoo, “Bearing Information-based Trajectory Planning for Window Traversal,” <em>2023 9th International Conference on Control, Decision and Information Technologies (CoDIT)</em>, Rome, Italy, 2023, pp. 1291-1295. 
+                <a href="https://doi.org/10.1109/CoDIT58514.2023.10284194" target="_blank">doi:10.1109/CoDIT58514.2023.10284194</a>.
+            </li>
+            <li>
+                E. K. Midhun and A. Ratnoo, “Quadrotor Guidance for Traversal Through Moving Gaps Using Bearing-Only Information,” in <em>AIAA Scitech 2022 Forum</em>, AIAA Paper 2022-0539, 2022. 
+                <a href="https://doi.org/10.2514/6.2022-0539" target="_blank">doi:10.2514/6.2022-0539</a>.
+            </li>
+            <li>
+                E. K. Midhun and A. Ratnoo, “Safe Traversal Guidance for Quadrotors Using Gap Bearing Information,” in <em>2021 International Conference on Unmanned Aircraft Systems (ICUAS)</em>, pp. 482–487, 2021. 
+                <a href="https://doi.org/10.1109/ICUAS51884.2021.9476785" target="_blank">doi:10.1109/ICUAS51884.2021.9476785</a>.
+            </li>
+            <li>
+                E. K. Midhun and Sunil Kumar T.K., “LabVIEW based real time implementation of Fractional Order PID controller for a magnetic levitation system,” <em>2016 IEEE 1st International Conference on Power Electronics, Intelligent Control and Energy Systems (ICPEICES)</em>, Delhi, India, 2016, pp. 1-6. 
+                <a href="https://doi.org/10.1109/ICPEICES.2016.7853463" target="_blank">doi:10.1109/ICPEICES.2016.7853463</a>.
+            </li>
+            <li>
+                G. Satheesh Krishnan, P. T. Bijilesh, S. P. Simon, G. V. Puthusserry, E. K. Midhun and T. Mithun, “Maximum Power Point tracking in PV Systems using Plant Reproduction algorithm,” <em>2020 IEEE International Conference on Power Electronics, Smart Grid and Renewable Energy (PESGRE2020)</em>, Cochin, India, 2020, pp. 1-6. 
+                <a href="https://doi.org/10.1109/PESGRE45664.2020.9070629" target="_blank">doi:10.1109/PESGRE45664.2020.9070629</a>.
+            </li>
+        </ol>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li><strong>Researcher</strong>, Lulea University of Technology, Sweden (Jan 2025 - Present)</li>
+            <li><strong>Research Associate</strong>, Indian Institute of Science, Bengaluru (July 2024 - Dec 2024)</li>
+            <li><strong>Assistant Professor</strong>, National Institute of Technology Tiruchirapalli (July 2017 - May 2018)</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:midhunlbs@gmail.com">midhunlbs@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/midhun-e-k-a595b495" target="_blank">Midhun E K</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Midhun E K. All rights reserved.</p>
+    </footer>
+</body>
+</html>
