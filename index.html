@@ -3,110 +3,945 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midhun E K - Robotics and AI Researcher</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Dr. Midhun Edatharam Kunnath | Postdoctoral Research Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and special effects */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .publication-card {
+            transition: all 0.3s ease;
+        }
+        
+        .publication-card:hover {
+            background-color: #f8f9fa;
+            border-left: 4px solid #4f46e5;
+        }
+        
+        /* Gradient text for section headers */
+        .gradient-text {
+            background: linear-gradient(90deg, #4f46e5 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <!-- Add your profile image here -->
-        <img src="midhun.jpg" alt="Midhun E K" class="profile-image">
-        <h1>Midhun Edatharam Kunnath</h1>
-        <p>Researcher, Robotics and Artificial Intelligence</p>
-        <p>Lulea University of Technology, Sweden</p>
-        <p>Developing AI models for virtual forest creation using LiDAR point cloud data</p>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-robot text-indigo-600 text-2xl"></i>
+                <h1 class="text-xl font-bold text-indigo-600">Dr. <span class="gradient-text">Midhun Edatharam Kunnath</span></h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="text-gray-600 hover:text-indigo-600 transition">Home</a></li>
+                    <li><a href="#research" class="text-gray-600 hover:text-indigo-600 transition">Research</a></li>
+                    <li><a href="#projects" class="text-gray-600 hover:text-indigo-600 transition">Projects</a></li>
+                    <li><a href="#publications" class="text-gray-600 hover:text-indigo-600 transition">Publications</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-indigo-600 transition">Contact</a></li>
+                    <li>
+                        <a href="#" class="bg-indigo-600 text-white px-3 py-2 rounded-md hover:bg-indigo-700 transition flex items-center">
+                            <i class="fas fa-download mr-2"></i> CV
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button id="menu-toggle" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-md">
+            <ul class="flex flex-col space-y-3">
+                <li><a href="#home" class="block py-2 text-gray-600 hover:text-indigo-600 transition">Home</a></li>
+                <li><a href="#research" class="block py-2 text-gray-600 hover:text-indigo-600 transition">Research</a></li>
+                <li><a href="#projects" class="block py-2 text-gray-600 hover:text-indigo-600 transition">Projects</a></li>
+                <li><a href="#publications" class="block py-2 text-gray-600 hover:text-indigo-600 transition">Publications</a></li>
+                <li><a href="#contact" class="block py-2 text-gray-600 hover:text-indigo-600 transition">Contact</a></li>
+                <li>
+                    <a href="#" class="block py-2 px-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition flex items-center">
+                        <i class="fas fa-download mr-2"></i> Download CV
+                    </a>
+                </li>
+            </ul>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>As a Ph.D. holder in Aerospace Engineering from the Indian Institute of Science (IISc), I specialized in designing and implementing bearing-only measurement-based guidance for quadrotor UAVs in gap traversal scenarios. My research contributions include two articles published in the Journal of Guidance, Control, and Dynamics and five papers presented at prestigious international conferences. Additionally, I have over one and a half years of experience as an Assistant Professor at NIT Tiruchirappalli and as an Electronics Design Engineer at Greendzine Technologies. I am passionate about advancing aerospace engineering and contributing to the development of innovative and sustainable solutions for future challenges. 
-            My PhD was awarded on July 16, 2024. I then worked as a Research Associate at the Autonomous Vehicles Laboratory (AVL), Department of Aerospace Engineering, Indian Institute of Science, Bengaluru, India. Currently, I am a Researcher at the Robotics and Artificial Intelligence group, Department of Computer Science, Electrical and Space Engineering, Luleå University of Technology, Sweden, working on AI-based tree segmentation for virtual forest creation.</p>
+    <!-- Hero Section -->
+    <section id="home" class="py-20 bg-gradient-to-r from-indigo-50 to-emerald-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 slide-up">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Dr. <span class="gradient-text">Researcher</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">Postdoctoral Research Fellow</h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Specializing in [Your Research Field] with a focus on [Specific Research Topics]. 
+                        Passionate about advancing knowledge through innovative research methodologies 
+                        and interdisciplinary collaboration.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#research" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition shadow-md">
+                            Explore My Research
+                        </a>
+                        <a href="#contact" class="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50 transition">
+                            Get in Touch
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                            <i class="fas fa-download mr-2"></i> Download Full CV
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                             alt="Robotics Researcher" class="rounded-lg shadow-xl w-full max-w-md h-auto">
+                        <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-md">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-robot text-indigo-600"></i>
+                                <span class="font-semibold">PhD in Robotics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="research">
-        <h2>Research</h2>
-        <p>My research interests include:</p>
-        <ul>
-            <li>Aerial robotics</li>
-            <li>Quadrotor guidance</li>
-            <li>Autonomous navigation</li>
-            <li>Path planning</li>
-            <li>UAS Traffic Management (UTM)</li>
-            <li>Computer Vision</li>
-            <li>Machine Learning</li>
-        </ul>
+    <!-- Research Section -->
+    <section id="research" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 slide-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Robotics <span class="gradient-text">Research</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Advancing robotic systems through novel algorithms and hardware designs for aerial and ground applications. 
+                    My work bridges perception, planning, and control to create autonomous solutions for real-world problems.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Research Card 1 -->
+                <div class="research-card bg-white rounded-xl shadow-md overflow-hidden transition transform hover:scale-105">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                             alt="Research Area 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Planar Guidance for Flying Through Gaps</h3>
+                        <p class="text-gray-600 mb-4">
+                            A novel guidance method enabling quadrotors to traverse planar gaps using bearings-only information.
+                            The proposed heading direction  is designed using an elliptic shaping angle derived from the angular bisector orientation of the 
+                            gap-bearing angles . The stability of the resulting closed-loop kinematics is ascertained using Lyapunov’s direct method. Additionally, a phase plane analysis is carried
+                            out to visualize the safe traversal characteristics of the proposed method considering all
+                            possible initial conditions around the gap. Combined with a tracking controller, the proposed
+                            guidance strategy is applied to a six-degree-of-freedom (6-DOF) quadrotor model, ensuring
+                            convergence towards the prescribed trajectory. The effectiveness of the proposed guidance
+                            method is validated with numerical simulations and experimental flight trials.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Bearings only information</span>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Quadrotor</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Simulation</span>
+                        </div>
+                        <a href="  https://doi.org/10.2514/1.G006898" class="text-indigo-600 font-medium flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Research Card 2 -->
+                <div class="research-card bg-white rounded-xl shadow-md overflow-hidden transition transform hover:scale-105">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="relative h-full w-full">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">[Second Research Area]</h3>
+                        <p class="text-gray-600 mb-4">
+                            Explanation of another significant area of your research. Describe the video 
+                            content (experiment, conference presentation, etc.) and its relation to your work.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Experiment</span>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Analysis</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-medium flex items-center">
+                            Watch Presentation <i class="fas fa-play-circle ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Research Card 3 -->
+                <div class="research-card bg-white rounded-xl shadow-md overflow-hidden transition transform hover:scale-105">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605443307606-9d8168472a39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                             alt="Research Area 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Legged Locomotion</h3>
+                        <p class="text-gray-600 mb-4">
+                            Research on dynamic legged robot control combining reinforcement learning and 
+                            model-based approaches for robust traversal of complex terrain.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Collaboration</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Innovation</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-medium flex items-center">
+                            Read Case Study <i class="fas fa-book-open ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Research Card 4 -->
+                <div class="research-card bg-white rounded-xl shadow-md overflow-hidden transition transform hover:scale-105">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605443307606-9d8168472a39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                             alt="Research Area 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Legged Locomotion</h3>
+                        <p class="text-gray-600 mb-4">
+                            Research on dynamic legged robot control combining reinforcement learning and 
+                            model-based approaches for robust traversal of complex terrain.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Collaboration</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Innovation</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-medium flex items-center">
+                            Read Case Study <i class="fas fa-book-open ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-block px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition">
+                    View All Research Areas
+                </a>
+            </div>
+        </div>
     </section>
 
-    <section id="publications">
-        <h2>Publications</h2>
-
-        <h3>Journal Articles</h3>
-        <ol>
-            <li>
-                E. K. Midhun and A. Ratnoo, “Local Information-Based Guidance for Lane Transition in Air Corridors,” <em>Journal of Guidance, Control, and Dynamics</em>, Vol. 47, No. 3, pp. 564-572, 2024. 
-                <a href="https://doi.org/10.2514/1.G007752" target="_blank">https://doi.org/10.2514/1.G007752</a>
-            </li>
-            <li>
-                E. K. Midhun and A. Ratnoo, “Gap Traversal Guidance Using Bearing Information,” <em>Journal of Guidance, Control, and Dynamics</em>, Vol. 45, No. 12, pp. 2360-2368, 2022. 
-                <a href="https://doi.org/10.2514/1.G006898" target="_blank">https://doi.org/10.2514/1.G006898</a>
-            </li>
-            <li>
-                E. K. Midhun and A. Ratnoo, “Quadrotor Guidance for Window Traversal: A Bearings-Only Approach,” arXiv preprint arXiv: 2410.14367, 2024. 
-                <a href="https://arxiv.org/abs/2410.14367" target="_blank">https://arxiv.org/abs/2410.14367</a>
-            </li>
-        </ol>
-
-        <h3>Conference Proceedings</h3>
-        <ol>
-            <li>
-                E. K. Midhun and A. Ratnoo, “Bearing Information-based Trajectory Planning for Window Traversal,” <em>2023 9th International Conference on Control, Decision and Information Technologies (CoDIT)</em>, Rome, Italy, 2023, pp. 1291-1295. 
-                <a href="https://doi.org/10.1109/CoDIT58514.2023.10284194" target="_blank">doi:10.1109/CoDIT58514.2023.10284194</a>.
-            </li>
-            <li>
-                E. K. Midhun and A. Ratnoo, “Quadrotor Guidance for Traversal Through Moving Gaps Using Bearing-Only Information,” in <em>AIAA Scitech 2022 Forum</em>, AIAA Paper 2022-0539, 2022. 
-                <a href="https://doi.org/10.2514/6.2022-0539" target="_blank">doi:10.2514/6.2022-0539</a>.
-            </li>
-            <li>
-                E. K. Midhun and A. Ratnoo, “Safe Traversal Guidance for Quadrotors Using Gap Bearing Information,” in <em>2021 International Conference on Unmanned Aircraft Systems (ICUAS)</em>, pp. 482–487, 2021. 
-                <a href="https://doi.org/10.1109/ICUAS51884.2021.9476785" target="_blank">doi:10.1109/ICUAS51884.2021.9476785</a>.
-            </li>
-            <li>
-                E. K. Midhun and Sunil Kumar T.K., “LabVIEW based real time implementation of Fractional Order PID controller for a magnetic levitation system,” <em>2016 IEEE 1st International Conference on Power Electronics, Intelligent Control and Energy Systems (ICPEICES)</em>, Delhi, India, 2016, pp. 1-6. 
-                <a href="https://doi.org/10.1109/ICPEICES.2016.7853463" target="_blank">doi:10.1109/ICPEICES.2016.7853463</a>.
-            </li>
-            <li>
-                G. Satheesh Krishnan, P. T. Bijilesh, S. P. Simon, G. V. Puthusserry, E. K. Midhun and T. Mithun, “Maximum Power Point tracking in PV Systems using Plant Reproduction algorithm,” <em>2020 IEEE International Conference on Power Electronics, Smart Grid and Renewable Energy (PESGRE2020)</em>, Cochin, India, 2020, pp. 1-6. 
-                <a href="https://doi.org/10.1109/PESGRE45664.2020.9070629" target="_blank">doi:10.1109/PESGRE45664.2020.9070629</a>.
-            </li>
-        </ol>
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Academic <span class="gradient-text">Background</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    My educational journey focused on robotics and intelligent systems research.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Education Item 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-indigo-600">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold">PhD in Robotics and Intelligent Systems</h3>
+                            <p class="text-gray-600">[University Name], [Country]</p>
+                        </div>
+                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">2016-2020</span>
+                    </div>
+                    <p class="text-gray-600 mt-4">
+                        Thesis: "[Your PhD Thesis Title]"
+                        <br>
+                        Advisors: [Advisor Names]
+                    </p>
+                </div>
+                
+                <!-- Education Item 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-emerald-600">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold">MS in Mechanical Engineering</h3>
+                            <p class="text-gray-600">[University Name], [Country]</p>
+                        </div>
+                        <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">2014-2016</span>
+                    </div>
+                    <p class="text-gray-600 mt-4">
+                        Specialization: Robotics and Control Systems
+                        <br>
+                        GPA: [Your GPA]
+                    </p>
+                </div>
+                
+                <!-- Education Item 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-purple-600">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold">BE in Mechanical Engineering</h3>
+                            <p class="text-gray-600">[University Name], [Country]</p>
+                        </div>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">2010-2014</span>
+                    </div>
+                    <p class="text-gray-600 mt-4">
+                        Key Courses: Robotics, Control Theory, Mechatronics
+                        <br>
+                        Honors: [Any honors received]
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Researcher</strong>, Lulea University of Technology, Sweden (Jan 2025 - Present)</li>
-            <li><strong>Research Associate</strong>, Indian Institute of Science, Bengaluru (July 2024 - Dec 2024)</li>
-            <li><strong>Assistant Professor</strong>, National Institute of Technology Tiruchirapalli (July 2017 - May 2018)</li>
-        </ul>
+    <!-- Experience Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Professional <span class="gradient-text">Experience</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    My career path spans both academic and industry research.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Experience Item 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-indigo-600 hover:shadow-lg transition">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold">Postdoctoral Research Fellow</h3>
+                            <p class="text-gray-600">[Current University/Institution], [Department]</p>
+                        </div>
+                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">2021-Present</span>
+                    </div>
+                    <ul class="mt-4 space-y-2 text-gray-600 list-disc pl-5">
+                        <li>Develop novel algorithms for [specific research area]</li>
+                        <li>Collaborate with interdisciplinary team on [project name]</li>
+                        <li>Supervise graduate students and research assistants</li>
+                        <li>Author high-impact publications in top journals</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-emerald-600 hover:shadow-lg transition">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold">Research Assistant</h3>
+                            <p class="text-gray-600">[Previous University], [Department]</p>
+                        </div>
+                        <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">2016-2020</span>
+                    </div>
+                    <ul class="mt-4 space-y-2 text-gray-600 list-disc pl-5">
+                        <li>Conducted doctoral research on [specific topic]</li>
+                        <li>Developed [specific technology/method]</li>
+                        <li>Published [X] first-author papers in [conferences/journals]</li>
+                        <li>Awarded [any fellowships/awards received]</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-purple-600 hover:shadow-lg transition">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold">Robotics Engineer Intern</h3>
+                            <p class="text-gray-600">[Company Name], [Country]</p>
+                        </div>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Summer 2015</span>
+                    </div>
+                    <ul class="mt-4 space-y-2 text-gray-600 list-disc pl-5">
+                        <li>Designed and implemented [specific project]</li>
+                        <li>Worked on [specific technology] development</li>
+                        <li>Gained industry experience in [specific area]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:midhunlbs@gmail.com">midhunlbs@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/midhun-e-k-a595b495" target="_blank">Midhun Edatharam Kunnath</a></p>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Current <span class="gradient-text">Project</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Actively engaged in several cutting-edge research initiatives with interdisciplinary 
+                    teams and industry partners.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Project 4 (Ground Robot) -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-600 transform transition hover:-translate-y-1">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-amber-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-lightbulb text-amber-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">[Project Title]</h3>
+                            <p class="text-gray-600 mb-2">
+                                <span class="font-semibold">Funding:</span> [Funding Source], [Year]-[Year]
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                <span class="font-semibold">Role:</span> [Your Role - PI, Co-PI, Researcher etc.]
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Description of an exploratory or high-risk/high-reward project that pushes 
+                        boundaries in your field. Include unique aspects or preliminary results.
+                    </p>
+                    <button class="text-amber-600 font-medium flex items-center project-details-btn">
+                        View Details <i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                    <div class="project-details mt-4 hidden">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold mb-2">Innovation Highlights:</h4>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Novel method for [application]</li>
+                                <li>Potential to revolutionize [field]</li>
+                                <li>Patent pending on [technology]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Midhun Edatharam Kunnath. All rights reserved.</p>
+    <!-- Publications Section -->
+    <section id="publications" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Research <span class="gradient-text">Publications</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Peer-reviewed articles, conference proceedings, book chapters, and other scholarly works 
+                    contributing to the advancement of knowledge in [Your Field].
+                </p>
+            </div>
+            
+            <div class="flex justify-center mb-8">
+                <div class="flex space-x-2">
+                    <button class="publication-filter px-4 py-2 rounded-lg bg-indigo-600 text-white" data-filter="all">All</button>
+                    <button class="publication-filter px-4 py-2 rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200" data-filter="journal">Journal Articles</button>
+                    <button class="publication-filter px-4 py-2 rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200" data-filter="conference">Conference Papers</button>
+                    <button class="publication-filter px-4 py-2 rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200" data-filter="chapter">Book Chapters</button>
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto publication-container">
+                <!-- Journal Article -->
+                <div class="publication-card mb-6 p-6 border-l-4 border-indigo-600 bg-white rounded-lg shadow-sm hover:shadow-md transition cursor-pointer publication-item journal">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">[Article Title]</h3>
+                            <p class="text-gray-600 mb-2">
+                                <span class="font-semibold">Authors:</span> Lastname, F., Yourname, R., Collaborator, A.
+                            </p>
+                            <p class="text-gray-600 mb-2">
+                                <span class="font-semibold">Journal:</span> Journal of [Your Field], Vol. X, No. Y, pp. Z-ZZ (Year)
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                <span class="font-semibold">Impact Factor:</span> X.XXX | Citations: XX
+                            </p>
+                        </div>
+                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Journal</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Brief overview of the paper's key contributions and findings. Highlight its significance 
+                        to the field and any notable recognition it has received.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> PDF
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-800 flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Publisher
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-800 flex items-center">
+                            <i class="fab fa-google mr-2"></i> Scholar
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Conference Paper -->
+                <div class="publication-card mb-6 p-6 border-l-4 border-emerald-600 bg-white rounded-lg shadow-sm hover:shadow-md transition cursor-pointer publication-item conference">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">[Conference Paper Title]</h3>
+                            <p class="text-gray-600 mb-2">
+                                <span class="font-semibold">Authors:</span> Yourname, R., Lastname, F.
+                            </p>
+                            <p class="text-gray-600 mb-2">
+                                <span class="font-semibold">Conference:</span> Proceedings of the XXth International Conference on [Topic], pp. XX-XX (Year)
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                <span class="font-semibold">Venue:</span> [City, Country] | Presentation Type: [Oral/Poster]
+                            </p>
+                        </div>
+                        <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Conference</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Summary of the conference presentation, including key points discussed and feedback 
+                        received from the community. Mention if it won any awards.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> PDF
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-800 flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Proceedings
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Book Chapter -->
+                <div class="publication-card mb-6 p-6 border-l-4 border-purple-600 bg-white rounded-lg shadow-sm hover:shadow-md transition cursor-pointer publication-item chapter">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">[Chapter Title]</h3>
+                            <p class="text-gray-600 mb-2">
+                                <span class="font-semibold">Authors:</span> Yourname, R., Seniorauthor, P.
+                            </p>
+                            <p class="text-gray-600 mb-2">
+                                <span class="font-semibold">Book:</span> "Book Title", Editors: Editor1, Editor2, Publisher, pp. XX-XX (Year)
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                <span class="font-semibold">ISBN:</span> XXX-XXXXXXXXXX
+                            </p>
+                        </div>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Chapter</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Description of the book chapter's focus and your contributions. Mention the book's 
+                        significance and intended audience (textbook, reference work, etc.).
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                            <i class="fas fa-book mr-2"></i> Publisher
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-800 flex items-center">
+                            <i class="fas fa-shopping-cart mr-2"></i> Purchase
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Preprint -->
+                <div class="publication-card mb-6 p-6 border-l-4 border-amber-600 bg-white rounded-lg shadow-sm hover:shadow-md transition cursor-pointer publication-item journal">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">[Preprint Title]</h3>
+                            <p class="text-gray-600 mb-2">
+                                <span class="font-semibold">Authors:</span> Collaborator, A., Yourname, R., Lastname, F.
+                            </p>
+                            <p class="text-gray-600 mb-2">
+                                <span class="font-semibold">Status:</span> Submitted to [Journal Name] | Under Review
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                <span class="font-semibold">Preprint:</span> arXiv:XXXX.XXXXX | Date: Month Year
+                            </p>
+                        </div>
+                        <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">Preprint</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Summary of the working paper's key contributions and current status in the 
+                        publication process. Include links to preprint servers.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                            <i class="fas fa-file-alt mr-2"></i> Preprint
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <a href="#" class="inline-block px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition">
+                    View Full Publication List
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </body>
+</html>
+    <section id="contact" class="py-20 bg-gradient-to-r from-indigo-50 to-emerald-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get in <span class="gradient-text">Touch</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    I welcome collaborations, speaking engagements, and conversations about research opportunities. 
+                    Feel free to reach out through any of the following channels.
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
+                <!-- Contact Information -->
+                <div class="lg:w-1/3 bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-bold mb-6 text-indigo-600">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-university text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Affiliation</h4>
+                                <p class="text-gray-600">[Your University/Institution]</p>
+                                <p class="text-gray-600">[Department Name]</p>
+                                <p class="text-gray-600">[Building Name], [Room Number]</p>
+                                <p class="text-gray-600">[City, State ZIP], Country</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <a href="mailto:your.email@university.edu" class="text-indigo-600 hover:text-indigo-800 break-all">your.email@university.edu</a>
+                                <p class="text-sm text-gray-500 mt-1">Preferred contact method for initial inquiries</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Phone</h4>
+                                <p class="text-gray-600">+1 (XXX) XXX-XXXX</p>
+                                <p class="text-sm text-gray-500 mt-1">Office hours: Weekdays 10am-3pm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-calendar-alt text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Schedule a Meeting</h4>
+                                <a href="#" class="text-indigo-600 hover:text-indigo-800">Book via Calendly</a>
+                                <p class="text-sm text-gray-500 mt-1">For students, collaborators, and media</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Connect Socially</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-indigo-100 p-3 rounded-lg text-indigo-600 hover:bg-indigo-200 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-indigo-100 p-3 rounded-lg text-indigo-600 hover:bg-indigo-200 transition">
+                                <i class="fab fa-researchgate"></i>
+                            </a>
+                            <a href="#" class="bg-indigo-100 p-3 rounded-lg text-indigo-600 hover:bg-indigo-200 transition">
+                                <i class="fab fa-google-scholar"></i>
+                            </a>
+                            <a href="#" class="bg-indigo-100 p-3 rounded-lg text-indigo-600 hover:bg-indigo-200 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-indigo-100 p-3 rounded-lg text-indigo-600 hover:bg-indigo-200 transition">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="lg:w-2/3 bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-bold mb-6 text-indigo-600">Send a Message</h3>
+                    
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block mb-2 font-medium text-gray-700">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block mb-2 font-medium text-gray-700">Subject</label>
+                            <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
+                                <option value="">Select a topic</option>
+                                <option value="collaboration">Research Collaboration</option>
+                                <option value="speaking">Speaking Engagement</option>
+                                <option value="students">Student Supervision</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2 font-medium text-gray-700">Message</label>
+                            <textarea id="message" rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" required></textarea>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <input type="checkbox" id="consent" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 transition" required>
+                            <label for="consent" class="ml-2 text-sm text-gray-600">
+                                I consent to having this website store my submitted information so Dr. Researcher can respond to my inquiry.
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-4 rounded-lg hover:bg-indigo-700 transition shadow-md font-medium">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                    
+                    <div id="formSuccess" class="hidden mt-6 p-4 bg-emerald-100 text-emerald-800 rounded-lg">
+                        <i class="fas fa-check-circle mr-2"></i> Thank you for your message! I will get back to you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-microscope text-indigo-400 text-xl"></i>
+                        <h3 class="text-xl font-bold text-white">Dr. Researcher</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Advancing knowledge through innovative research in [Your Field]. Committed to scientific 
+                        excellence and real-world impact.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-researchgate"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-google-scholar"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-orcid"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#research" class="text-gray-400 hover:text-white transition">Research</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="#publications" class="text-gray-400 hover:text-white transition">Publications</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">CV/Resume</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Teaching Materials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Lab Protocols</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Data Repositories</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Useful Links</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Academic Profiles</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">University Profile</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Google Scholar</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">ResearchGate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">ORCID</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Publons</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-sm text-gray-400">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p>© 2023 Dr. Researcher. All rights reserved.</p>
+                    <p class="mt-2 md:mt-0">Made with <i class="fas fa-heart text-red-400 mx-1"></i> for science and discovery.</p>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-indigo-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Project details toggle
+        const projectButtons = document.querySelectorAll('.project-details-btn');
+        projectButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const details = this.nextElementSibling;
+                details.classList.toggle('hidden');
+                const icon = this.querySelector('i');
+                
+                if (details.classList.contains('hidden')) {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+
+        // Publication filtering
+        const filterButtons = document.querySelectorAll('.publication-filter');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                filterButtons.forEach(btn => {
+                    if (btn === this) {
+                        btn.classList.remove('bg-gray-100', 'text-gray-800');
+                        btn.classList.add('bg-indigo-600', 'text-white');
+                    } else {
+                        btn.classList.remove('bg-indigo-600', 'text-white');
+                        btn.classList.add('bg-gray-100', 'text-gray-800');
+                    }
+                });
+                
+                // Filter publications
+                const filter = this.getAttribute('data-filter');
+                const publications = document.querySelectorAll('.publication-item');
+                
+                publications.forEach(pub => {
+                    if (filter === 'all' || pub.classList.contains(filter)) {
+                        pub.style.display = 'block';
+                        setTimeout(() => {
+                            pub.style.opacity = '1';
+                        }, 50);
+                    } else {
+                        pub.style.opacity = '0';
+                        setTimeout(() => {
+                            pub.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            const successMessage = document.getElementById('formSuccess');
+            
+            // Hide form, show success message
+            this.style.display = 'none';
+            successMessage.classList.remove('hidden');
+            successMessage.classList.add('slide-up');
+            
+            // You would typically submit the form to a server here
+            // For demo purposes, we're just showing the success message
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Animation on scroll
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.slide-up, .fade-in');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Set initial state for animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.slide-up, .fade-in');
+            elements.forEach(element => {
+                if (element.classList.contains('slide-up')) {
+                    element.style.opacity = '0';
+                    element.style.transform = 'translateY(50px)';
+                } else if (element.classList.contains('fade-in')) {
+                    element.style.opacity = '0';
+                }
+            });
+            
+            // Trigger animations for elements already in view
+            animateOnScroll();
+            
+            // Set timeout to ensure animations trigger after initial render
+            setTimeout(animateOnScroll, 100);
+        });
+
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
 </body>
 </html>
